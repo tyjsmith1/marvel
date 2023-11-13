@@ -94,11 +94,12 @@ https://trello.com/b/55SLtuhD/marvel-project
 
 ## Style Guide
 ![image](https://github.com/tyjsmith1/marvel/assets/95344047/ff797fdb-6b2a-4c5b-b703-d3cbfba9343d)
-Red - FF0000
-Black - 000000
-White - FFFFFF
-Gold - FAC42E
-Light Blue - A9C4EB
+
+1) Red - FF0000
+2) Black - 000000
+3) White - FFFFFF
+4) Gold - FAC42E
+5) Light Blue - A9C4EB
 
 ## Stretch Deliverables
 1) simulate battle between 2 characters
