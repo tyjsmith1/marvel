@@ -89,6 +89,8 @@ We will utilize the marvel API (https://developer.marvel.com/). Example:
 https://trello.com/b/55SLtuhD/marvel-project
 
 ## Wireframe
+![image](https://github.com/tyjsmith1/marvel/assets/95344047/d3e6c0cc-2b4d-4b09-86db-fff8fa88f32d)
+
 
 ## Style Guide
 ![image](https://github.com/tyjsmith1/marvel/assets/95344047/ff797fdb-6b2a-4c5b-b703-d3cbfba9343d)
@@ -97,3 +99,8 @@ Black - 000000
 White - FFFFFF
 Gold - FAC42E
 Light Blue - A9C4EB
+
+## Stretch Deliverables
+1) simulate battle between 2 characters
+2) Users can like specific characters
+3) 
