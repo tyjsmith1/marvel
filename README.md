@@ -37,12 +37,9 @@ Example JSON:
       "image": "https://en.wikipedia.org/wiki/File:Chris_Hemsworth_as_Thor.jpg#/media/File:Chris_Hemsworth_as_Thor.jpg",
       "description": "Thor wields a powerful hammer called Mjolnir, and is initially depicted as the arrogant heir to the throne of Asgard whose brash behaviors causes turmoil among the Nine Realms under Asgard's protection. This brings him into conflict with his villainous adopted brother, Loki.",
       "class": "hero",
-      "img_url": "https://books.google.com/books/content?id=3S8Rwr-iBdoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "stats": [
-        {
-          "wins": 2,
-          "losses": 2
-        }
+      "wins": 4,
+      "losses": 3,
+      "likes": 10
       }
     ]
 {
