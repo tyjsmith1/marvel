@@ -4,92 +4,25 @@
 We are creating a website that allows users to view details about their favorite Marvel characters and interact with them in different ways.
 
 ## API
-We will utilize the marvel API (https://developer.marvel.com/). Example:
+We are going to create our own JSON server with the following 10 characters (5 heroes, 5 villians):
+Thor
+IronMan
+spiderman
+black panther
+scarlet witch
+juggernaut
+red skull
+venom
+magneto
+loki
 
-{
-  "code": "int",
-  "status": "string",
-  "copyright": "string",
-  "attributionText": "string",
-  "attributionHTML": "string",
-  "data": {
-    "offset": "int",
-    "limit": "int",
-    "total": "int",
-    "count": "int",
-    "results": [
-      {
-        "id": "int",
-        "name": "string",
-        "description": "string",
-        "modified": "Date",
-        "resourceURI": "string",
-        "urls": [
-          {
-            "type": "string",
-            "url": "string"
-          }
-        ],
-        "thumbnail": {
-          "path": "string",
-          "extension": "string"
-        },
-        "comics": {
-          "available": "int",
-          "returned": "int",
-          "collectionURI": "string",
-          "items": [
-            {
-              "resourceURI": "string",
-              "name": "string"
-            }
-          ]
-        },
-        "stories": {
-          "available": "int",
-          "returned": "int",
-          "collectionURI": "string",
-          "items": [
-            {
-              "resourceURI": "string",
-              "name": "string",
-              "type": "string"
-            }
-          ]
-        },
-        "events": {
-          "available": "int",
-          "returned": "int",
-          "collectionURI": "string",
-          "items": [
-            {
-              "resourceURI": "string",
-              "name": "string"
-            }
-          ]
-        },
-        "series": {
-          "available": "int",
-          "returned": "int",
-          "collectionURI": "string",
-          "items": [
-            {
-              "resourceURI": "string",
-              "name": "string"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "etag": "string"
-}
 
 ## Trello Board
-https://trello.com/b/55SLtuhD/marvel-project
+https://trello.com/b/mgMI5wDb/marvel-project
 
 ## Wireframe
-![image](https://github.com/tyjsmith1/marvel/assets/95344047/d3e6c0cc-2b4d-4b09-86db-fff8fa88f32d)
+![image](https://github.com/tyjsmith1/marvel/assets/95344047/fa0fd216-06f9-4d5e-b297-2e8158101391)
+
 
 
 ## Style Guide
@@ -102,6 +35,6 @@ https://trello.com/b/55SLtuhD/marvel-project
 5) Light Blue - A9C4EB
 
 ## Stretch Deliverables
-1) simulate battle between 2 characters
-2) Users can like specific characters
+1) Users can like specific characters and this info is stored on the server
+2) Users can 
 3) 
