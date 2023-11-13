@@ -21,8 +21,7 @@ loki
 https://trello.com/b/mgMI5wDb/marvel-project
 
 ## Wireframe
-![image](https://github.com/tyjsmith1/marvel/assets/95344047/b574596f-8005-45b5-9685-fa9a52407ab0)
-
+![image](https://github.com/tyjsmith1/marvel/assets/95344047/fa0fd216-06f9-4d5e-b297-2e8158101391)
 
 
 
