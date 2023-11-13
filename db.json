@@ -46,8 +46,8 @@
         "image": "",
         "description": "Scarlet Witch, also known as Wanda Maximoff, is a Marvel Comics character with reality-altering and chaos magic abilities. Originating from the mutant X-Men universe, she has the power to manipulate probability, create energy blasts, and reshape reality, making her a formidable and complex character in the Marvel Universe.",
         "class": "hero",
-        "wins": 2,
-        "losses": 2,
+        "wins": 3,
+        "losses": 1,
         "likes": 5
       },
       {
@@ -64,27 +64,27 @@
         "id": 7,
         "name": "Red Skull",
         "image": "",
-        "description": "",
+        "description": "Red Skull, the alias of Johann Schmidt, is a notorious villain in the Marvel Universe, primarily associated with Captain America. A former Nazi officer, Red Skull possesses enhanced strength and agility due to a version of the Super-Soldier Serum. His most distinctive feature is a grotesque red skull-like visage, the result of an early experiment gone awry, making him a symbol of hatred and a formidable adversary with a brilliant strategic mind.",
         "class": "villian",
-        "wins": 2,
-        "losses": 2,
-        "likes": 5
+        "wins": 1,
+        "losses": 4,
+        "likes": 0
       },
       {
         "id": 8,
         "name": "Venom",
         "image": "",
-        "description": "",
+        "description": "Venom is a symbiotic alien creature in the Marvel Universe that bonds with a host, enhancing their physical abilities and granting them a monstrous appearance. Initially merging with Eddie Brock, Venom is known for its dual nature, combining Eddie's characteristics with the aggressive instincts of the alien symbiote. Together, Venom possesses superhuman strength, agility, and a lethal array of tendrils, making it a complex and iconic antihero or villain, depending on the circumstances.",
         "class": "villian",
-        "wins": 2,
+        "wins": 3,
         "losses": 2,
-        "likes": 5
+        "likes": 3
       },
       {
         "id": 9,
         "name": "Magneto",
         "image": "",
-        "description": "",
+        "description": "Magneto, also known as Erik Lehnsher, is a powerful mutant in the Marvel Universe and a frequent adversary of the X-Men. As the master of magnetism, Magneto can generate and control magnetic fields, giving him the ability to manipulate metal objects, fly, and create force fields. Driven by a vision of mutant superiority, Magneto is a complex character whose beliefs often put him in conflict with other superheroes.",
         "class": "villian",
         "wins": 2,
         "losses": 2,
@@ -94,11 +94,11 @@
         "id": 10,
         "name": "Loki",
         "image": "",
-        "description": "",
+        "description": "Loki is a complex character in the Marvel Universe, known as the God of Mischief and brother to Thor. As a trickster god, Loki possesses magical abilities, including shape-shifting, illusion-casting, and sorcery. With a mischievous and unpredictable nature, Loki often alternates between being a formidable villain and an antihero, adding depth to his character within the Marvel mythology.",
         "class": "villian",
-        "wins": 2,
+        "wins": 5,
         "losses": 2,
-        "likes": 5
+        "likes": 10
       }
     ]
 }
