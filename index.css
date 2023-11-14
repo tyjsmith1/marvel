@@ -1,0 +1,9 @@
+.body-div {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+} 
