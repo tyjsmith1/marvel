@@ -1,4 +1,17 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .body-div {
+    flex: 1;
     display: flex;
     flex-direction: row;
 }
@@ -19,13 +32,60 @@ h1 {
     animation: pulsate 2s infinite;
 }
 
-body {
+#hero-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: top;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 50%;
+}
+
+#villain-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: top;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 50%;
+}
+
+#villain-list {
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'sans-serif', arial;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'sans-serif', impact;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 0px 0px 20px red;
+}
+
+#hero-list {
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'sans-serif', arial;
+}
+
+html {
     background-image: url(https://images.unsplash.com/photo-1531811027466-d90d527b4424?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-repeat: no-repeat;
     background-size: cover;
     image-rendering: auto;
 }
 
+/* Animation for header */
 @keyframes pulsate {
     0% {
         text-shadow: 0px 0px 10px red;
