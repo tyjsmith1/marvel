@@ -110,12 +110,13 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border: 3px solid black;
+    /*border: 3px solid black;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);*/
+    background: none;
+    border: none;
 
 }
-
 html {
     background-image: url(https://images.unsplash.com/photo-1531811027466-d90d527b4424?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-repeat: no-repeat;
