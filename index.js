@@ -1,4 +1,5 @@
 const url = "http://localhost:3000/characters"
+const likeButtonSrc = "./assets/like-button.png"
 
 //hero elements
 const heroListContainer = document.getElementById("hero-list")
@@ -8,6 +9,14 @@ const heroWins = document.getElementById("hero-wins")
 const heroLosses = document.getElementById("hero-losses")
 const heroLikes = document.getElementById("hero-likes")
 const heroTitle = document.getElementById("hero-title")
+const heroLikeButton = document.getElementById("hero-like-button")
+const likeHeroImage = document.createElement("img")
+let selectedHero = null
+
+function renderHeroLikeButton () {
+likeHeroImage.src = likeButtonSrc
+heroLikeButton.appendChild(likeHeroImage)
+}
 
 //villain elements
 const villainListContainer = document.getElementById("villain-list")
@@ -17,9 +26,16 @@ const villainWins = document.getElementById("villain-wins")
 const villainLosses = document.getElementById("villain-losses")
 const villainLikes = document.getElementById("villain-likes")
 const villainTitle = document.getElementById("villain-title")
+const villainLikeButton = document.getElementById("villain-like-button")
+const likeVillainImage = document.createElement("img")
+let selectedVillain = null
 
+function renderVillainLikeButton () {
+    likeVillainImage.src = likeButtonSrc
+    villainLikeButton.appendChild(likeVillainImage)
+    }
 
-//server test complete!
+//server
 fetch(url)
 .then(response => response.json())
 .then(characters => {
@@ -48,6 +64,7 @@ function renderHero (characters) {
         })
     })
 }
+
 function renderHeroSelection(character) {
     heroTitle.textContent = character.name
     heroImage.src = character.image
@@ -55,7 +72,33 @@ function renderHeroSelection(character) {
     heroWins.textContent = `Wins: ${character.wins}`
     heroLosses.textContent = `Losses: ${character.losses}`
     heroLikes.textContent = `Likes: ${character.likes}`
+    
+    selectedHero = character
+    renderHeroLikeButton(character)
 }
+
+// --------LIKE BUTTON SERVER UPDATE------//
+heroLikeButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log(selectedHero)
+
+    const updatedLikes = {
+        likes: selectedHero.likes +1
+    }
+
+    fetch(`${url}/${selectedHero.id}`,{
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedLikes)
+    })
+    .then(response => response.json())
+    .then(character => {
+        renderHeroSelection(character)
+    })
+})
+
 
 // -------------- VILLAIN RENDER FUNCTIONS ----------------//
 
@@ -82,9 +125,34 @@ function renderVillainSelection(character) {
     villainWins.textContent = `Wins: ${character.wins}`
     villainLosses.textContent = `Losses: ${character.losses}`
     villainLikes.textContent = `Likes: ${character.likes}`
-}
 
-//fight button event listener
+    selectedVillain = character
+    renderVillainLikeButton(character)
+}
+// --------LIKE BUTTON SERVER UPDATE------//
+villainLikeButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const updatedLikes = {
+        likes: selectedVillain.likes +1
+    }
+
+    fetch(`${url}/${selectedVillain.id}`,{
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedLikes)
+    })
+    .then(response => response.json())
+    .then(character => {
+        renderVillainSelection(character)
+    })
+})
+
+
+
+//----------fight button event listener------//
 const fightButton = document.getElementById("fight")
 fightButton.addEventListener("mouseover", (e) => {
     e.preventDefault()
