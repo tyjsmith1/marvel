@@ -1,0 +1,104 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Thor",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Chris_Hemsworth_as_Thor.jpg/220px-Chris_Hemsworth_as_Thor.jpg",
+      "description": "Thor wields a powerful hammer called Mjolnir, and is initially depicted as the arrogant heir to the throne of Asgard whose brash behaviors causes turmoil among the Nine Realms under Asgard's protection. This brings him into conflict with his villainous adopted brother, Loki.",
+      "class": "hero",
+      "wins": 2,
+      "losses": 2,
+      "likes": 5
+    },
+    {
+      "id": 2,
+      "name": "IronMan",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Iron_Man_%28circa_2018%29.png/220px-Iron_Man_%28circa_2018%29.png",
+      "description": "Iron Man is the superhero persona of Anthony Edward Stark, a businessman and engineer who runs the company Stark Industries. He built technologically advanced armor that grants him superhuman strength, flight, energy projection, and other abilities.",
+      "class": "hero",
+      "wins": 1,
+      "losses": 4,
+      "likes": 4
+    },
+    {
+      "id": 3,
+      "name": "Spider-Man",
+      "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png",
+      "description": "Spider-Man gets his superhuman spider-powers and abilities after being bitten by a radioactive spider; these include superhuman strength, agility, reflexes, stamina, durability, coordination, and balance, clinging to surfaces and ceilings like a spider, and detecting danger with his precognition ability called spider-sense.",
+      "class": "hero",
+      "wins": 3,
+      "losses": 2,
+      "likes": 3
+    },
+    {
+      "id": 4,
+      "name": "Black Panther",
+      "image": "https://cdn.aaihs.org/2017/08/v006q4ynkmbxcdfqo7fj.jpg",
+      "description": "Black Panther, also known as T'Challa, is the king of the African nation of Wakanda and possesses enhanced strength, agility, and senses due to consuming the heart-shaped herb. He is a skilled martial artist, strategist, and is adorned with a vibranium suit that grants him durability and energy absorption.",
+      "class": "hero",
+      "wins": 4,
+      "losses": 2,
+      "likes": 7
+    },
+    {
+      "id": 5,
+      "name": "Scarlet Witch",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Scarlet_Witch.jpg/220px-Scarlet_Witch.jpg",
+      "description": "Scarlet Witch, also known as Wanda Maximoff, is a Marvel Comics character with reality-altering and chaos magic abilities. Originating from the mutant X-Men universe, she has the power to manipulate probability, create energy blasts, and reshape reality, making her a formidable and complex character in the Marvel Universe.",
+      "class": "hero",
+      "wins": 3,
+      "losses": 1,
+      "likes": 5
+    },
+    {
+      "id": 6,
+      "name": "Juggernaut",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/44/Juggernaut2.PNG/250px-Juggernaut2.PNG",
+      "description": "Juggernaut, also known as Cain Marko, is a powerful villain in the Marvel Universe. He is a mutant with superhuman strength and invulnerability, thanks to the mystical gem known as the Crimson Gem of Cyttorak. Once in motion, nothing can stop the Juggernaut, making him an unstoppable force and a formidable adversary for superheroes like the X-Men.",
+      "class": "villain",
+      "wins": 2,
+      "losses": 2,
+      "likes": 5
+    },
+    {
+      "id": 7,
+      "name": "Red Skull",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/Red_Skull_%28Johann_Schmidt%29.png/220px-Red_Skull_%28Johann_Schmidt%29.png",
+      "description": "Red Skull, the alias of Johann Schmidt, is a notorious villain in the Marvel Universe, primarily associated with Captain America. A former Nazi officer, Red Skull possesses enhanced strength and agility due to a version of the Super-Soldier Serum. His most distinctive feature is a grotesque red skull-like visage, the result of an early experiment gone awry, making him a symbol of hatred and a formidable adversary with a brilliant strategic mind.",
+      "class": "villain",
+      "wins": 1,
+      "losses": 4,
+      "likes": 0
+    },
+    {
+      "id": 8,
+      "name": "Venom",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Web_of_Venom.png/220px-Web_of_Venom.png",
+      "description": "Venom is a symbiotic alien creature in the Marvel Universe that bonds with a host, enhancing their physical abilities and granting them a monstrous appearance. Initially merging with Eddie Brock, Venom is known for its dual nature, combining Eddie's characteristics with the aggressive instincts of the alien symbiote. Together, Venom possesses superhuman strength, agility, and a lethal array of tendrils, making it a complex and iconic antihero or villain, depending on the circumstances.",
+      "class": "villain",
+      "wins": 3,
+      "losses": 2,
+      "likes": 3
+    },
+    {
+      "id": 9,
+      "name": "Magneto",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Magneto_%28Marvel_Comics_character%29.jpg/220px-Magneto_%28Marvel_Comics_character%29.jpg",
+      "description": "Magneto, also known as Erik Lehnsher, is a powerful mutant in the Marvel Universe and a frequent adversary of the X-Men. As the master of magnetism, Magneto can generate and control magnetic fields, giving him the ability to manipulate metal objects, fly, and create force fields. Driven by a vision of mutant superiority, Magneto is a complex character whose beliefs often put him in conflict with other superheroes.",
+      "class": "villain",
+      "wins": 2,
+      "losses": 2,
+      "likes": 5
+    },
+    {
+      "id": 10,
+      "name": "Loki",
+      "image": "https://media.discordapp.net/attachments/1172997925794750524/1174000629761454222/Loki.png?ex=6566004a&is=65538b4a&hm=2bf7afccd50707357a88a07a44b708d221b6ab672af675a2aff186c32faad015&=",
+      "description": "Loki is a complex character in the Marvel Universe, known as the God of Mischief and brother to Thor. As a trickster god, Loki possesses magical abilities, including shape-shifting, illusion-casting, and sorcery. With a mischievous and unpredictable nature, Loki often alternates between being a formidable villain and an antihero, adding depth to his character within the Marvel mythology.",
+      "class": "villain",
+      "wins": 5,
+      "losses": 2,
+      "likes": 10
+    }
+  ]
+}

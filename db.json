@@ -33,7 +33,7 @@
       {
         "id": 4,
         "name": "Black Panther",
-        "image": "https://upload.wikimedia.org/wikipedia/en/d/d6/Black_Panther_%28film%29_poster.jpg",
+        "image": "https://cdn.aaihs.org/2017/08/v006q4ynkmbxcdfqo7fj.jpg",
         "description": "Black Panther, also known as T'Challa, is the king of the African nation of Wakanda and possesses enhanced strength, agility, and senses due to consuming the heart-shaped herb. He is a skilled martial artist, strategist, and is adorned with a vibranium suit that grants him durability and energy absorption.",
         "class": "hero",
         "wins": 4,
@@ -93,7 +93,7 @@
       {
         "id": 10,
         "name": "Loki",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Tom_Hiddleston_by_Gage_Skidmore.jpg/220px-Tom_Hiddleston_by_Gage_Skidmore.jpg",
+        "image": "https://media.discordapp.net/attachments/1172997925794750524/1174000629761454222/Loki.png?ex=6566004a&is=65538b4a&hm=2bf7afccd50707357a88a07a44b708d221b6ab672af675a2aff186c32faad015&=",
         "description": "Loki is a complex character in the Marvel Universe, known as the God of Mischief and brother to Thor. As a trickster god, Loki possesses magical abilities, including shape-shifting, illusion-casting, and sorcery. With a mischievous and unpredictable nature, Loki often alternates between being a formidable villain and an antihero, adding depth to his character within the Marvel mythology.",
         "class": "villain",
         "wins": 5,
