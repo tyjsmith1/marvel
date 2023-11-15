@@ -91,7 +91,7 @@ fightButton.addEventListener("mouseover", (e) => {
     console.log ("mouse")
     //have the fight button change when we hover the mouse over it
     const hoverMotion = document.getElementById("hover")
-    hoverMotion.src = "./assets/Component 1.jpg"
+    hoverMotion.src = "./assets/Component 1.png"
 
 
 })
