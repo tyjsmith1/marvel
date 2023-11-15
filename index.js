@@ -83,3 +83,15 @@ function renderVillainSelection(character) {
     villainLosses.textContent = `Losses: ${character.losses}`
     villainLikes.textContent = `Likes: ${character.likes}`
 }
+
+//fight button event listener
+const fightButton = document.getElementById("fight")
+fightButton.addEventListener("mouseover", (e) => {
+    e.preventDefault()
+    console.log ("mouse")
+    //have the fight button change when we hover the mouse over it
+    const hoverMotion = document.getElementById("hover")
+    hoverMotion.src = "./assets/Component 1.jpg"
+
+
+})
