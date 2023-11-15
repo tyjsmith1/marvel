@@ -142,3 +142,9 @@ html {
         transform: scale(1);
     }
 }
+
+/*like buttons*/
+.like-button {
+    background: none;
+    border: none;
+}
