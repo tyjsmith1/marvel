@@ -5,7 +5,7 @@
 
 body,
 html {
-    margin: 0;
+    margin: auto; /*tyler changed to auto because hero list was getting cut off*/ 
     padding: 0;
     height: 100%;
 }
@@ -21,9 +21,10 @@ body {
     flex-direction: row;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+#villain-image, #hero-image {
+    max-height: 300px;
+    margin: auto;
+    max-width: 300px;
 }
 
 h1 {
@@ -127,6 +128,7 @@ h3 {
     background-color: rgba(255, 255, 255, 0.8);*/
     background: none;
     border: none;
+    margin: auto;
 
 }
 
@@ -159,4 +161,23 @@ html {
 .like-button {
     background: none;
     border: none;
+}
+
+#hero-list li, #villain-list li {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    list-style-type: none;
+}
+
+#vs-image {
+    min-width: 15%;
+    align-items: center;
+    margin-top: 200px;
+    margin-right: 10px
+}
+
+#vs-image img {
+    width: 100%;
+    align-items: center;
+
 }
