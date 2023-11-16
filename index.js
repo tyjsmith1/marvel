@@ -13,9 +13,9 @@ const heroLikeButton = document.getElementById("hero-like-button")
 const likeHeroImage = document.createElement("img")
 let selectedHero = null
 
-function renderHeroLikeButton () {
-likeHeroImage.src = likeButtonSrc
-heroLikeButton.appendChild(likeHeroImage)
+function renderHeroLikeButton() {
+    likeHeroImage.src = likeButtonSrc
+    heroLikeButton.appendChild(likeHeroImage)
 }
 
 //villain elements
@@ -30,26 +30,26 @@ const villainLikeButton = document.getElementById("villain-like-button")
 const likeVillainImage = document.createElement("img")
 let selectedVillain = null
 
-function renderVillainLikeButton () {
+function renderVillainLikeButton() {
     likeVillainImage.src = likeButtonSrc
     villainLikeButton.appendChild(likeVillainImage)
-    }
+}
 
 //server
 fetch(url)
-.then(response => response.json())
-.then(characters => {
-    const heroCharacters = characters.filter(character => character.class === "hero")
-    renderHero(heroCharacters)
+    .then(response => response.json())
+    .then(characters => {
+        const heroCharacters = characters.filter(character => character.class === "hero")
+        renderHero(heroCharacters)
 
-    const villainCharacters = characters.filter(character => character.class === "villain")
-    renderVillain(villainCharacters)
-}
-)
+        const villainCharacters = characters.filter(character => character.class === "villain")
+        renderVillain(villainCharacters)
+    }
+    )
 
 // -------------- HERO RENDER FUNCTIONS ----------------//
 
-function renderHero (characters) {
+function renderHero(characters) {
     characters.forEach(character => {
         //1) create a new element
         const heroListItem = document.createElement("li")
@@ -72,7 +72,7 @@ function renderHeroSelection(character) {
     heroWins.textContent = `Wins: ${character.wins}`
     heroLosses.textContent = `Losses: ${character.losses}`
     heroLikes.textContent = `Likes: ${character.likes}`
-    
+
     selectedHero = character
     renderHeroLikeButton(character)
 }
@@ -83,26 +83,26 @@ heroLikeButton.addEventListener('click', (e) => {
     console.log(selectedHero)
 
     const updatedLikes = {
-        likes: selectedHero.likes +1
+        likes: selectedHero.likes + 1
     }
 
-    fetch(`${url}/${selectedHero.id}`,{
+    fetch(`${url}/${selectedHero.id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(updatedLikes)
     })
-    .then(response => response.json())
-    .then(character => {
-        renderHeroSelection(character)
-    })
+        .then(response => response.json())
+        .then(character => {
+            renderHeroSelection(character)
+        })
 })
 
 
 // -------------- VILLAIN RENDER FUNCTIONS ----------------//
 
-function renderVillain (characters) {
+function renderVillain(characters) {
     characters.forEach(character => {
         //1) create a new element
         const villainListItem = document.createElement("li")
@@ -134,20 +134,20 @@ villainLikeButton.addEventListener('click', (e) => {
     e.preventDefault()
 
     const updatedLikes = {
-        likes: selectedVillain.likes +1
+        likes: selectedVillain.likes + 1
     }
 
-    fetch(`${url}/${selectedVillain.id}`,{
+    fetch(`${url}/${selectedVillain.id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(updatedLikes)
     })
-    .then(response => response.json())
-    .then(character => {
-        renderVillainSelection(character)
-    })
+        .then(response => response.json())
+        .then(character => {
+            renderVillainSelection(character)
+        })
 })
 
 
@@ -156,21 +156,76 @@ villainLikeButton.addEventListener('click', (e) => {
 const fightButton = document.getElementById("fight")
 fightButton.addEventListener("mouseover", (e) => {
     e.preventDefault()
-    console.log ("mouse")
+    console.log("mouse")
     //have the fight button change when we hover the mouse over it
-     renderMouseOver(e)
+    renderMouseOver(e)
 
 
 })
 
 const hoverMotion = document.getElementById("hover")
 function renderMouseOver() {
-  
+
     hoverMotion.src = "./assets/Component 1.png"
 }
 
 fightButton.addEventListener("mouseleave", (e) => {
-    
+
     e.preventDefault
     hoverMotion.src = "./assets/oh comic button.png"
 })
+
+// ----------battle simulation-----------
+
+let battleArray = [selectedHero, selectedVillain]
+fightButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    const randomIndex = Math.floor(Math.random() * battleArray.length)
+    if (randomIndex === 1) {
+        fightSimulationResultsWinner(selectedHero)
+        fightSimulationResultsLoser(selectedVillain)
+    } else {
+        fightSimulationResultsWinner(selectedVillain)
+        fightSimulationResultsLoser(selectedHero)
+    }
+});
+
+// ----------winner---------------------
+
+function fightSimulationResultsWinner(winner) {
+    const updatedWin = {
+        wins: winner.wins + 1
+    }
+    fetch(`${url}/${winner.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedWin)
+    }
+        .then(response => response.json())
+        .then(winner => {
+            const updatedWins = winner.wins
+            const winsElement = document.getElementById(`${winner.class}-wins`)
+            winsElement.textContent = `Wins: ${updatedWins}`
+        })
+
+    // ----------loser-------------------
+
+    function fightSimulationResultsLoser(loser) {
+            const updatedLoser = {
+                losses: loser.losses + 1
+            }
+            fetch(`${url}/${loser.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(updatedLoser)
+            }
+                .then(response => response.json())
+                .then(loser => {
+                    const updatedLosses = loser.losses
+                    const lossesElement = document.getElementById(`${loser.class}-losses`)
+                    lossesElement.textContent = `Losses: ${updatedLosses}`
+                })
