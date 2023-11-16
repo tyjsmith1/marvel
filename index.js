@@ -203,12 +203,15 @@ function fightSimulationResultsWinner(winner) {
         },
         body: JSON.stringify(updatedWin)
     }
-        .then(response => response.json())
-        .then(winner => {
-            const updatedWins = winner.wins
-            const winsElement = document.getElementById(`${winner.class}-wins`)
-            winsElement.textContent = `Wins: ${updatedWins}`
+    )
+    .then(response => response.json())
+    .then(winner => {
+        const updatedWins = winner.wins
+        const winsElement = document.getElementById(`${winner.class}-wins`)
+        winsElement.textContent = `Wins: ${updatedWins}`
         })
+    
+    }
 
     // ----------loser-------------------
 
@@ -222,10 +225,11 @@ function fightSimulationResultsWinner(winner) {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(updatedLoser)
-            }
+            })
                 .then(response => response.json())
                 .then(loser => {
                     const updatedLosses = loser.losses
                     const lossesElement = document.getElementById(`${loser.class}-losses`)
                     lossesElement.textContent = `Losses: ${updatedLosses}`
                 })
+            }
