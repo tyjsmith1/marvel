@@ -6,7 +6,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Chris_Hemsworth_as_Thor.jpg/220px-Chris_Hemsworth_as_Thor.jpg",
       "description": "Thor wields a powerful hammer called Mjolnir, and is initially depicted as the arrogant heir to the throne of Asgard whose brash behaviors causes turmoil among the Nine Realms under Asgard's protection. This brings him into conflict with his villainous adopted brother, Loki.",
       "class": "hero",
-      "wins": 7,
+      "wins": 8,
       "losses": 7,
       "likes": 13
     },
@@ -57,7 +57,7 @@
       "description": "Juggernaut, also known as Cain Marko, is a powerful villain in the Marvel Universe. He is a mutant with superhuman strength and invulnerability, thanks to the mystical gem known as the Crimson Gem of Cyttorak. Once in motion, nothing can stop the Juggernaut, making him an unstoppable force and a formidable adversary for superheroes like the X-Men.",
       "class": "villain",
       "wins": 7,
-      "losses": 6,
+      "losses": 7,
       "likes": 10
     },
     {
