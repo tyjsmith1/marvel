@@ -39,9 +39,11 @@ function renderVillainLikeButton() {
 fetch(url)
     .then(response => response.json())
     .then(characters => {
+        //split hero characters to different array
         const heroCharacters = characters.filter(character => character.class === "hero")
         renderHero(heroCharacters)
-
+        
+        //split villain characters to different array
         const villainCharacters = characters.filter(character => character.class === "villain")
         renderVillain(villainCharacters)
     }
@@ -65,6 +67,7 @@ function renderHero(characters) {
     })
 }
 
+//populates the center area whenever a hero is clicked from the hero list
 function renderHeroSelection(character) {
     heroTitle.textContent = character.name
     heroImage.src = character.image
@@ -78,9 +81,9 @@ function renderHeroSelection(character) {
 }
 
 // --------LIKE BUTTON SERVER UPDATE------//
+
 heroLikeButton.addEventListener('click', (e) => {
     e.preventDefault()
-    console.log(selectedHero)
 
     const updatedLikes = {
         likes: selectedHero.likes + 1
@@ -93,6 +96,7 @@ heroLikeButton.addEventListener('click', (e) => {
         },
         body: JSON.stringify(updatedLikes)
     })
+    // pessimistic rendering!!! because the front end is updated with server data
         .then(response => response.json())
         .then(character => {
             renderHeroSelection(character)
@@ -118,6 +122,7 @@ function renderVillain(characters) {
     })
 }
 
+//populates the center area whenever a villain is clicked from the villain list
 function renderVillainSelection(character) {
     villainTitle.textContent = character.name
     villainImage.src = character.image
@@ -156,16 +161,15 @@ villainLikeButton.addEventListener('click', (e) => {
 const fightButton = document.getElementById("fight")
 fightButton.addEventListener("mouseover", (e) => {
     e.preventDefault()
-    console.log("mouse")
+
     //have the fight button change when we hover the mouse over it
     renderMouseOver(e)
-
-
 })
 
 const hoverMotion = document.getElementById("hover")
-function renderMouseOver() {
 
+// function sent to mouseover event listener
+function renderMouseOver() {
     hoverMotion.src = "./assets/Component 1.png"
 }
 
@@ -177,10 +181,17 @@ fightButton.addEventListener("mouseleave", (e) => {
 
 // ----------battle simulation-----------
 
+//create an array to out of the characters selected by the user
 let battleArray = [selectedHero, selectedVillain]
+
+//event listener that will simulate a battle on "click" of fight button
 fightButton.addEventListener("click", (e) => {
     e.preventDefault()
+    
+    //Simulation is simply a random number generated
     const randomIndex = Math.floor(Math.random() * battleArray.length)
+    
+    //if random number === 1, the hero wins. if random number === 0, the villain wins
     if (randomIndex === 1) {
         fightSimulationResultsWinner(selectedHero)
         fightSimulationResultsLoser(selectedVillain)
@@ -190,7 +201,8 @@ fightButton.addEventListener("click", (e) => {
     }
 });
 
-// ----------winner---------------------
+// ---------UPDATE WINNER STATS---------------------
+
 
 function fightSimulationResultsWinner(winner) {
     const updatedWin = {
@@ -206,30 +218,46 @@ function fightSimulationResultsWinner(winner) {
     )
     .then(response => response.json())
     .then(winner => {
+        //this approach is otimistic because it updates front end elements directly
         const updatedWins = winner.wins
         const winsElement = document.getElementById(`${winner.class}-wins`)
         winsElement.textContent = `Wins: ${updatedWins}`
-        })
+    
+        //--- failed pessimistic approach---//
+        // if (loser === selectedHero) {
+        //     renderHeroSelection(loser);
+        // } else {
+        //     renderVillainSelection(loser);
+        // }
+    
+    })
     
     }
 
-    // ----------loser-------------------
+// ----------UPDATE LOSER STATS-------------------
 
-    function fightSimulationResultsLoser(loser) {
-            const updatedLoser = {
-                losses: loser.losses + 1
-            }
-            fetch(`${url}/${loser.id}`, {
-                method: "PATCH",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(updatedLoser)
-            })
-                .then(response => response.json())
-                .then(loser => {
-                    const updatedLosses = loser.losses
-                    const lossesElement = document.getElementById(`${loser.class}-losses`)
-                    lossesElement.textContent = `Losses: ${updatedLosses}`
-                })
-            }
+function fightSimulationResultsLoser(loser) {
+    const updatedLoser = {
+        losses: loser.losses + 1
+        }
+    fetch(`${url}/${loser.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedLoser)
+        })
+        .then(response => response.json())
+        .then(loser => {
+            //this approach is otimistic because it updates front end elements directly
+            const updatedLosses = loser.losses
+            const lossesElement = document.getElementById(`${loser.class}-losses`)
+            lossesElement.textContent = `Losses: ${updatedLosses}`
+                //--- failed pessimistic approach---//
+                // if (loser === selectedHero) {
+                //     renderHeroSelection(loser);
+                // } else {
+                //     renderVillainSelection(loser);
+                // }
+        })
+}
